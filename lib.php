@@ -194,7 +194,7 @@ class repository_dropbox extends repository {
         }
 
         dropbox_print("DATA", TRUE);
-        dropbox_print($data);
+        dropbox_print(serialize($data));
         return serialize($reference);
     }
 
