@@ -25,6 +25,8 @@
  */
 require_once($CFG->dirroot . '/repository/lib.php');
 
+require_once("$CFG->dirroot/repository/dropbox/io_print.php"); 
+
 /**
  * Repository to access Dropbox files
  *
@@ -191,6 +193,8 @@ class repository_dropbox extends repository {
             }
         }
 
+        dropbox_print("DATA", TRUE);
+        dropbox_print($data);
         return serialize($reference);
     }
 
